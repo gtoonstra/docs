@@ -57,11 +57,14 @@ The person creating the app will be redirected to a GitHub page with an input fi
 `name` | `string` | The name of the GitHub App.
 `url` | `string` | **Required.** The homepage of your GitHub App.
 `hook_attributes` | `object` | The configuration of the GitHub App's webhook.
-`redirect_url` | `string` | The full URL to redirect to after the person installs the GitHub App.
+`redirect_url` | `string` | The full URL to redirect to after the person created the GitHub App. (this is not the callback url after installing the app).
 `description` | `string` | A description of the GitHub App.
 `public` | `boolean` | Set to `true` when your GitHub App is available to the public or `false` when it is only accessible to the owner of the app.
 `default_events` | `array` | The list of [events](/webhooks/event-payloads) the GitHub App subscribes to.
 `default_permissions` | `object` | The set of [permissions](/rest/reference/permissions-required-for-github-apps) needed by the GitHub App. The format of the object uses the permission name for the key (for example, `issues`) and the access type for the value (for example, `write`).
+
+For a full list of all possible parameters, see the [Create a GitHub App using URL parameters
+](/rest/reference/apps#creating-github-apps-using-url-parameters).
 
 The `hook_attributes` object has the following key:
 
